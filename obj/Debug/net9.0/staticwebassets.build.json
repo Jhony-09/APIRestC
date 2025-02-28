@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qQXqbcamLItKf9sU3GdCGwhnJHnDw0ZT6NkljmxNRg0=",
+  "Source": "webApiTwo",
+  "BasePath": "_content/webApiTwo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
