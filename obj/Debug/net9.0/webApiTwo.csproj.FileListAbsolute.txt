@@ -31,3 +31,4 @@ C:\platzi\webApiTwo\obj\Debug\net9.0\refint\webApiTwo.dll
 C:\platzi\webApiTwo\obj\Debug\net9.0\webApiTwo.pdb
 C:\platzi\webApiTwo\obj\Debug\net9.0\webApiTwo.genruntimeconfig.cache
 C:\platzi\webApiTwo\obj\Debug\net9.0\ref\webApiTwo.dll
+C:\platzi\webApiTwo\obj\Debug\net9.0\webApiTwo.sourcelink.json
