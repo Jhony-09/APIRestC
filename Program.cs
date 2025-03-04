@@ -1,3 +1,5 @@
+using projectef;
+using webApiTwo.Controllers;
 using webApiTwo.Middlewares;
 using webApiTwo.Services;
 
@@ -10,9 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddSqlServer<TareasContext>(
+    "Data Source=192.168.0.109,1433;Initial Catalog=TareasDb;User ID=sa;Password=j797EMCt;TrustServerCertificate=True;");
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
-builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldService());
+//builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldService());
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<ITareasService, TareasService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

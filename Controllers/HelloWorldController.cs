@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using projectef;
 using webApiTwo.Services;
 
 namespace webApiTwo.Controllers;
@@ -9,18 +10,29 @@ public class HelloWorldController : ControllerBase
 {
     private readonly ILogger<HelloWorldController> _logger;
     
-    IHelloWorldService helloWorldService;
+   // IHelloWorldService helloWorldService;
+    TareasContext dbcontext;
 
-    public HelloWorldController(IHelloWorldService helloWorldService, ILogger<HelloWorldController> logger)
+    public HelloWorldController( ILogger<HelloWorldController> logger, TareasContext db)
     {
-        this.helloWorldService = helloWorldService;
+       // this.helloWorldService = helloWorldService;
+        
         _logger = logger;
+        dbcontext = db;
     }
 
-    [HttpGet]
+   /* [HttpGet]
     public IActionResult Get()
     {
         _logger.LogDebug("Retornando el saludo de bienvenida");
         return Ok(helloWorldService.GetHelloWorld());
+    }*/
+
+    [HttpGet]
+    [Route("createdb")]
+    public IActionResult CreateDatabase()
+    {
+        dbcontext.Database.EnsureCreated();
+        return Ok();
     }
 }

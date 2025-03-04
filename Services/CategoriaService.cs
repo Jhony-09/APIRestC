@@ -9,7 +9,7 @@ public class CategoriaService : ICategoriaService
 
     public CategoriaService(TareasContext dbcontext)
     {
-        context = dbcontext;
+        this.context = dbcontext;
     }
 
     public IEnumerable<Categoria> GetCategorias()
