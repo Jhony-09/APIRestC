@@ -31,7 +31,7 @@ namespace projectef
                 categoria.HasKey(c => c.idCat);
                 categoria.Property(c => c.nombreCat).HasMaxLength(150).IsRequired();
                 categoria.Property(c => c.descripcionCat).HasMaxLength(250).IsRequired(false);
-                categoria.HasMany(c => c.tareasCat).WithOne(t => t.categoriaTar).HasForeignKey(t => t.idCatTar);
+                categoria.HasMany(c => c.tareasCat).WithOne(t => t.categoriaTar).HasForeignKey(t => t.idCatTar).IsRequired(false);
                 categoria.Property(c => c.pesoCat);
                 
                 categoria.HasData(categoriasInit);
