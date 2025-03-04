@@ -17,7 +17,7 @@ namespace projectef.Models
         // TRAER TODAS LAS TAREAS ASOCIADAS A UNA CATEGORIA CONSULTADA
 
         [JsonIgnore]
-        public virtual ICollection<Tarea> tareasCat { get; set; }
+        public virtual ICollection<Tarea>? tareasCat { get; set; }
 
 
     }
